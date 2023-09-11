@@ -16,4 +16,4 @@ Save the event in local storage when the save button is clicked in that timebloc
   
 ## Demo
 Check out the app by clicking the link below:
-- https://timezoneapp-sepia.vercel.app/
+https://epicibby101.github.io/Work-Day-Scheduler/
