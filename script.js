@@ -24,3 +24,9 @@ workHours.forEach(function (hour) {
     timeBlock.append(hourCol, descriptionCol, saveBtnCol);
     container.append(timeBlock)
 })
+
+function loadEvents() {
+    workHours.forEach(function (hour) {
+        let event = localStorage.getItem(hour)
+    })
+}
