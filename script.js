@@ -27,6 +27,19 @@ workHours.forEach(function (hour) {
 
 function loadEvents() {
     workHours.forEach(function (hour) {
-        let event = localStorage.getItem(hour)
+        let event = localStorage.getItem(hour);
+        $('.description').each(function() {
+            if ($(this). siblings('.hour').text() === hour) {
+                $(this).val(event);
+            }
+        })
     })
 }
+
+loadEvents();
+
+$('.saveBtn').on('click', function() {
+    let hour = $(this).siblings('hour').text();
+    let event = $(this).siblings('.description').val();
+    localStorage.setItem(hour, event);
+})
