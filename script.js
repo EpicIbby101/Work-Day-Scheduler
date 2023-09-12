@@ -62,10 +62,10 @@ $(document).ready(function () {
     let currentHour = dayjs().format("h A");
     $(".time-block").each(function () {
       let blockHour = $(this).find(".hour").text();
-      if (blockHour === currentHour) {
-        $(this).addClass("present").removeClass("past future");
-      } else if (dayjs(blockHour, "h A").isBefore(dayjs(currentHour, "h A"))) {
+      if (blockHour < currentHour) {
         $(this).addClass("past").removeClass("present future");
+      } else if (blockHour == currentHour) {
+        $(this).addClass("present").removeClass("past future");
       } else {
         $(this).addClass("future").removeClass("past present");
       }
